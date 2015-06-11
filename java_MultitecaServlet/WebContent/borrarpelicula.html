@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>BORRAR PELICULA</title>
+<script type="text/javascript">
+
+function carga(){
+	document.getElementById("isan").focus();
+}
+function valideDatos(){
+	
+	var isan = document.getElementById("isan")
+	
+	if (isan.value == "" || isan.value == '' || isan.value == null){
+		alert ("introduce isan");
+		return false;
+	}
+}
+
+function pregunta(){ 
+    var resul = confirm('¿Desea borrar la pelicula seleccionada?');
+	if (resul == true){
+		document.formborrarpelicula.submit();
+	} 
+} 
+
+</script>
+
+</head>
+<body onload="carga();">
+<h1>BORRAR PELICULA</h1>
+	<form name="formborrarpelicula" action="borrar-pelicula.jr" method="POST">
+	<label for="titulo">ISAN</label><br />
+		<input type="text" id="isan" name="isan" value=""/> <br>
+	
+	
+	<button type="submit" name="submit" value="1" onsubmit="pregunta()" Onclick="pregunta()">BORRAR PELICULA </button>
+		<input type="button" Value="INICIO" Onclick="window.location.href='http://localhost:8080/multiteca/'">
+	</form>
+	
+</body>
+</html>

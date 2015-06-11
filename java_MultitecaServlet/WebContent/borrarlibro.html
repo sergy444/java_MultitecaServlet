@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>BORRAR LIBRO</title>
+<script type="text/javascript">
+
+function carga(){
+	document.getElementById("isbn").focus();
+}
+function valideDatos(){
+	
+	var isbn = document.getElementById("isbn")
+	
+	if (isbn.value == "" || isbn.value == '' || isbn.value == null){
+		alert ("introduce isbn");
+		return false;
+	}
+}
+
+
+function pregunta(){ 
+    var resul = confirm('¿Desea borrar el libro seleccionado?');
+	if (resul == true){
+		document.formborrarlibro.submit();
+	} 
+} 
+
+
+</script>
+
+</head>
+<body onload="carga();">
+<h1>BORRAR LIBRO</h1>
+	<form name="formborrarlibro" action="borrar-libro.jr" method="POST" onsubmit="return valideDatos();">
+	<label for="titulo">ISBN</label><br />
+		<input type="text" id="isbn" name="isbn" value=""/> <br>
+	
+	
+	<button type="submit" name="submit" value="1" onsubmit="pregunta()" Onclick="pregunta()">BORRAR LIBRO </button>
+		<input type="button" Value="INICIO" Onclick="window.location.href='http://localhost:8080/multiteca/'">
+	</form>
+	
+</body>
+</html>

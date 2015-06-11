@@ -1,0 +1,80 @@
+@CHARSET "UTF-8";
+
+body {
+    background-color: white;
+    background-image: url("o-BOOKS-facebook.png");
+    background-size: cover;
+}
+
+h1 {
+    color: red;
+    text-align: left;
+    margin-left: 20px;
+    font-size: 50px;
+    font-family:verdana;
+}
+th {
+    color: red;
+    text-align: center;
+    font-size: 25px;
+    font-family:verdana;
+}
+
+#isan {
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 15px;  
+}
+
+#titulo {
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 15px;  
+}
+
+#autor {
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 15px;  
+}
+
+#anoEdicion {
+    display: inline-block;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 20px;  
+}
+
+#discografica {
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 15px;  
+}
+#numCanciones {
+    display: inline-block;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 20px;  
+}
+
+#submit {
+    display: inline-block;
+    width : 75px; 
+    height : 75px;
+    margin-top:50px;
+    margin-left: 50px;
+    margin-right: 50px;  
+}
+
+#menu {
+    display: inline-block;
+    width : 75px; 
+    height : 75px;
+    margin-top:50px;
+    margin-left: 100px;
+    margin-right: 50px;  
+}

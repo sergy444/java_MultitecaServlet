@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>BORRAR DISCO</title>
+<script type="text/javascript">
+
+function carga(){
+	document.getElementById("ismn").focus();
+}
+function valideDatos(){
+	
+	var ismn = document.getElementById("ismn")
+	
+	if (ismn.value == "" || ismn.value == '' || ismn.value == null){
+		alert ("introduce ismn");
+		return false;
+	}
+}
+
+
+function pregunta(){ 
+    var resul = confirm('¿Desea borrar el disco seleccionado?');
+	if (resul == true){
+		document.formborrardisco.submit();
+	} 
+} 
+
+</script>
+
+</head>
+<body onload="carga();">
+<h1>BORRAR DISCO</h1>
+	<form name="formborrardisco" action="borrar-disco.jr" method="POST" onsubmit="return valideDatos();">
+	<label for="titulo">ISMN</label><br />
+		<input type="text" id="ismn" name="ismn" value=""/> <br>
+	
+	
+	<button type="submit" name="submit" value="1" onsubmit="pregunta()" Onclick="pregunta()">BORRAR DISCO </button>
+		<input type="button" Value="INICIO" Onclick="window.location.href='http://localhost:8080/multiteca/'">
+	</form>
+	
+</body>
+</html>
